@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多对象-柱状图</title>
+    <style>
+        *{
+            list-style: none;
+        }
+        li{
+            float:left;
+        }
+        #a{
+            margin-left: 20px;
+        }
+        #b{
+            margin-left: 115px;
+        }
+        #c{
+            margin-left: 130px;
+        }
+        .tubiao{
+            width:10px;
+            height:10px;
+            float: left;
+        }
+        .box1{
+            width:100px;
+            height:20px;
+            float: left;
+        }
+        #box{
+            position: absolute;
+            top:150px;left:450px;
+        }
+        #title{
+            position: absolute;
+            top:40px;left:180px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<canvas width="550" height="400" id="canvas" style="border: solid;"></canvas>
+
+<div>
+    <li id="a">HTML</li>
+    <li id="b">CSS</li>
+    <li id="c">JS</li>
+</div>
+<div id="box">
+    <div class="box1 a"><div class="tubiao a" style="background-color: lightblue"></div>HTML</div><br>
+    <div class="box1 b"><div class="tubiao b" style="background-color: lightgreen"></div>CSS</div><br>
+    <div class="box1 c"><div class="tubiao c" style="background-color: orange"></div>JS</div>
+</div>
+<div id="title">浏览器渲染效果对比</div>
+<script src="app.js"></script>
+</body>
+</html>
