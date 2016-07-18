@@ -1,0 +1,53 @@
+@media screen and (max-width: 600px) {
+    header .nav-wrap{
+        display: none;
+    }
+    header .search-wrap{
+        display: none;
+    }
+    header .action-nav{
+        display: none;
+    }
+    header .cdkey-entry{
+        display: none;
+    }
+    html,body{
+        width:100%;
+        height:100%;
+        position: relative;
+    }
+    header .container{
+        width:100%;
+        height:56px;
+        background-color: #ffffff;
+        position: absolute;
+        top:-6px;
+        left:50%;
+        margin-left:-80px;
+        z-index:-1;
+    }
+    .fl{
+        position: absolute;
+    }
+    .fl>a{
+        display: block;
+        text-indent: 0;
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+    }
+    #nav-hidden-btn{
+        display: block;
+    }
+    header .slider-area{
+        width:100%;
+        height:480px;
+    }
+}
+@media screen and (min-width: 600px){
+    #nav-hidden-btn{
+        display: none;
+    }
+}
+/*====================================== 响应式布局     ====================================*/

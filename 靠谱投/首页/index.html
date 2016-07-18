@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>靠谱投-首页</title>
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <!--<link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css">-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="response.css">
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--TODO  隐藏侧边栏-->
+<div id="nav-hidden-btn"></div>
+<div class="nav-hidden-canvas" id="canvas" style="display: none"></div>
+<div class="nav-hidden-list" id="canvas-list">
+    <div class="action-nav-hidden">
+        <a class="btn-login-hidden" href="#">登录</a>
+        <a class="btn-join-hidden" href="#">注册</a>
+    </div>
+    <ul class="action-list-hidden">
+        <li><a href="#" class="index">首页</a></li>
+        <li><a href="#">投我喜欢</a></li>
+        <li><a href="#">新手指南</a></li>
+    </ul>
+</div>
+<header id="header">
+
+    <div class="container">
+        <h1 class="logo fl">
+            <a href="#"><img src="../icon/logo-new.png"></a>
+        </h1>
+
+        <nav class="nav-wrap">
+            <ul class="nav-link">
+                <li><a href="#" class="active index">首页</a></li>
+                <li><a href="#">投我喜欢</a></li>
+                <li><a href="#">融资之路</a></li>
+                <li><a href="#">新手指南</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="search-wrap">
+        <form method="get" class="form">
+            <input type="text" name="word" class="search-input" id="search_word" value placeholder="找项目">
+            <input type="submit" id="search_btn" value="">
+        </form>
+    </div>
+    <ul class="action-nav">
+        <li><a href="#" class="btn-login">登录</a></li>
+        <li><a href="#" class="btn-join">注册</a></li>
+    </ul>
+    <a href="#" class="cdkey-entry">优先认购通道</a>
+
+    <div class="slider-area">
+        <img id="lunbo-pic" src="../img/01.jpeg">
+        <a href="#" id="prev"></a>
+        <a href="#" id="next"></a>
+        <ul class="slider-area-select">
+            <li><a href="#" class="slider-area-selection" id="selector0"></a></li>
+            <li><a href="#" class="slider-area-selection" id="selector1"></a></li>
+            <li><a href="#" class="slider-area-selection" id="selector2"></a></li>
+            <li><a href="#" class="slider-area-selection" id="selector3"></a></li>
+            <li><a href="#" class="slider-area-selection" id="selector4"></a></li>
+        </ul>
+    </div>
+    <div class="record-info">
+        <div class="inner">
+            <ul class="clearfix">
+                <li class="row">
+                    <strong>20</strong>
+                    已上线项目
+                </li>
+                <li class="row">
+                    <strong>121519</strong>
+                    人浏览
+                </li>
+                <li class="money">
+                    <strong>118,228,760</strong>
+                    申请金额
+                </li>
+                <li class="completed">
+                    <strong>44,270,000</strong>
+                    已融金额
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="video-info">
+        <div class="inner">
+            <a class="video-btn-1"></a>
+            <a class="video-btn-2"></a>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            <h2>众筹中</h2>
+        </div>
+        <ul class="projects">
+            <li class="card">
+                <a class="card-head">
+                    <img src="../img/FmZIFiKiFvMmh-tXuKzkkVB0uoge.jpeg">
+                </a>
+                <div class="card-body">
+                    <h3>
+                        <a href="#" class="title">辣尚瘾
+                            <span>/专注地道烤鱼</span>
+                        </a>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            北京市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                    <div class="head-hidden">
+                        <img src="../img/head1.png">
+                    </div>
+                    <p class="time-count">
+                        <span class="time-notice">融资倒计时:</span>
+                        <span class="time">时间</span>
+                    </p>
+                    <ul class="f-detail">
+                        <li class="f-money">
+                            <strong class="number">280
+                                <small class="dark">万</small>
+                            </strong>
+                            <span class="label">项目总额</span>
+                        </li>
+                        <li class="f-price">
+                            <strong class="number">3.00
+                                <small class="dark">万</small>
+                            </strong>
+                            <span class="label">每份金额</span>
+                        </li>
+                        <li class="f-day">
+                            <strong class="number">162
+                                <small class="dark">万</small>
+                            </strong>
+                            <span class="label">申请金额</span>
+                        </li>
+                        <li class="f-stock">
+                            <strong class="number">23
+                                <small class="dark">人</small>
+                            </strong>
+                            <span class="label">申请认购</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="card">
+                <a class="card-head">
+                    <img src="../img/FqmUMJw0Q2g5jyWzdgMfYU3VdmAG.jpeg">
+                </a>
+                <div class="card-body">
+                    <h3>
+                        <a href="#" class="title">仔皇堡
+                            <span>/做有态度的煲仔饭</span>
+                        </a>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            北京市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                    <div class="head-hidden">
+                        <img src="../img/head2.png">
+                    </div>
+                    <p class="time-count">
+                        <span class="time-notice">融资倒计时:</span>
+                        <span class="time">时间</span>
+                    </p>
+                    <ul class="f-detail">
+                        <li class="f-money">
+                            <strong class="number">163
+                                <small class="dark">万</small>
+                            </strong>
+                            <span class="label">项目总额</span>
+                        </li>
+                        <li class="f-price">
+                            <strong class="number">3.26
+                                <small class="dark">万</small>
+                            </strong>
+                            <span class="label">每份金额</span>
+                        </li>
+                        <li class="f-day">
+                            <strong class="number">329
+                                <small class="dark">万</small>
+                            </strong>
+                            <span class="label">申请金额</span>
+                        </li>
+                        <li class="f-stock">
+                            <strong class="number">61
+                                <small class="dark">人</small>
+                            </strong>
+                            <span class="label">申请认购</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="card">
+                <a class="card-head">
+                    <img src="../img/FoI5vPMgip48vL6xt6HUuNGhgRkr.jpeg">
+                </a>
+                <div class="card-body">
+                    <h3>
+                        <a href="#" class="title">仔皇堡
+                            <span>/做有态度的煲仔饭</span>
+                        </a>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            北京市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                    <div class="head-hidden">
+                        <img src="../img/head2.png">
+                    </div>
+                    <p class="time-count">
+                        <span class="time-notice">融资倒计时:</span>
+                        <span class="time">时间</span>
+                    </p>
+                    <ul class="f-detail">
+                        <li class="f-money">
+                            <strong class="number">163
+                                <small class="dark">万</small>
+                            </strong>
+                            <span class="label">项目总额</span>
+                        </li>
+                        <li class="f-price">
+                            <strong class="number">3.26
+                                <small class="dark">万</small>
+                            </strong>
+                            <span class="label">每份金额</span>
+                        </li>
+                        <li class="f-day">
+                            <strong class="number">387
+                                <small class="dark">万</small>
+                            </strong>
+                            <span class="label">申请金额</span>
+                        </li>
+                        <li class="f-stock">
+                            <strong class="number">78
+                                <small class="dark">人</small>
+                            </strong>
+                            <span class="label">申请认购</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="card">
+                <a class="card-head">
+                    <img src="../img/Fg8N2DdtudyK5X3Xl5jGvMPiLdPt.jpeg">
+                </a>
+                <div class="card-body">
+                    <h3>
+                        <a href="#" class="title">湘阁里辣
+                            <span>/品质源于诚信</span>
+                        </a>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            广东省
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                    <div class="head-hidden">
+                        <img src="../img/head2.png">
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+
+                    <ul class="f-detail">
+                        <li class="f-money">
+                            <strong class="number">100%
+                                <small class="dark"></small>
+                            </strong>
+                            <span class="label">融资进度</span>
+                        </li>
+                        <li class="f-price">
+                            <strong class="number">230
+                                <small class="dark">万</small>
+                            </strong>
+                            <span class="label">项目总额</span>
+                        </li>
+                        <li class="f-day">
+                            <strong class="number">2.00
+                                <small class="dark">万</small>
+                            </strong>
+                            <span class="label">每份金额</span>
+                        </li>
+                        <li class="f-stock">
+                            <strong class="number">17/
+                                <small class="dark">30天</small>
+                            </strong>
+                            <span class="label">剩余时间</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <h2>众筹成功</h2>
+        </div>
+        <div class="complete">
+            <a class="project" id="one">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project" id="two">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project" id="three">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+
+            <a class="project">
+                <div class="base-info">
+                    <h4>杨兴记臭鳜鱼</h4>
+                    <p>臭鳜鱼只有一种味道,就在杨兴记</p>
+                    <p class="location">
+                        <span class="icon-location"></span>
+                        北京市
+                    </p>
+                </div>
+                <p class="financing-info">
+                    项目总额
+                    <strong>360万</strong>
+                    股东
+                    <strong>43人</strong>
+                </p>
+                <div class="complete-info">
+                    <strong>
+                        融资
+                        <br>
+                        成功
+                    </strong>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="coming-list-header">
+        <h2>即将上线</h2>
+    </div>
+    <div class="coming-list">
+        <div class="inner">
+            <div class="coming-box">
+                <div class="coming "></div>
+                <div class="coming "></div>
+                <div class="coming "></div>
+                <div class="coming "></div>
+                <div class="coming "></div>
+                <div class="coming "></div>
+                <div class="coming "></div>
+                <div class="coming "></div>
+                <div class="coming "></div>
+                <div class="coming "></div>
+                <div class="coming "></div>
+                <div class="coming "></div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="up">
+        <div class="section-header" id="down">
+            <h2>众筹资讯</h2>
+        </div>
+        <div class="article card">
+            <a class="headline">
+                <div class="mask"></div>
+                <div class="word">
+                    <h4>哇!你居然扫描了二维码,你一定有很多问题想问</h4>
+                    <p>我想你大概在想，3万块钱做老板是什么意思？如果您正在吃饭，可以先收藏文章回头再看 : )如果您不着急，请听我慢慢道来...您应该想知道，3万块能当什么样的老板？事情的由来是这样的：辣尚瘾想用众筹的方式打造下一家新店，于是，辣尚瘾和靠谱投平台合作，为新店寻找股东。我们想找到50个喜爱辣尚瘾的朋友，共同出资，辣尚瘾出100多万，股东每人出3万，一起开一家新店。由</p>
+                </div>
+            </a>
+            <div class="article-list">
+                <ul>
+                    <li>
+                        <a href="#">哇！你居然扫了二维码，你一定有很多问题想问</a>
+                        <span>06-30</span>
+                    </li>
+                    <li>
+                        <a href="#">【投资人课堂】投资众筹餐饮，如何找到99%赚钱的项目</a>
+                        <span>12-16</span>
+                    </li>
+                    <li>
+                        <a href="#">什么样的餐饮众筹才是靠谱的？</a>
+                        <span>12-05</span>
+                    </li>
+                    <li>
+                        <a href="#">靠谱投创始人朱怀阳：请善待吃货们的众筹</a>
+                        <span>11-27</span>
+                    </li>
+                    <li>
+                        <a href="#">靠谱投CEO卿永：餐企莫上市！紧密式加盟才是未来出路</a>
+                        <span>11-22</span>
+                        <li>
+                            <a href="#">靠谱投创始人朱怀阳：请善待吃货们的众筹</a>
+                            <span>11-27</span>
+                        </li>
+                    </li>
+                </ul>
+                <a class="more-article">查看更多资讯</a>
+            </div>
+        </div>
+    </div>
+    <div class="user-guide">
+        <div class="container">
+            <div class="invest">
+                <h3>投资靠谱、盈利的餐饮项目</h3>
+                <p>靠谱投为投资人提供优质精益的餐饮项目，并为投资人提供专业的投后管理服务。</p>
+                <p>
+                    <a href="#">如何投资?</a>
+                </p>
+                <p class="action">
+                    <a href="#">注册</a>
+                </p>
+            </div>
+            <div class="invest" id="raise">
+                <h3>有效地融取项目资金</h3>
+                <p>靠谱投为餐饮品牌提供融资解决方案，为靠谱餐饮项目低成本、高效率实现融资目标。</p>
+                <p>
+                    <a href="#">如何众筹?</a>
+                </p>
+                <p class="action">
+                    <a href="#">提交申请</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+<footer id="footer">
+    <div class="footer-info">
+        <div class="inner">
+            <div class="list">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">靠谱投介绍</a></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">媒体报道</a></li>
+                </ul>
+            </div>
+            <div class="list">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">新手指南</a></li>
+                    <li><a href="#">投资人指南</a></li>
+                    <li><a href="#">项目方指南</a></li>
+                    <li><a href="#">名词解释</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="list">
+                <h4>相关协议</h4>
+                <ul>
+                    <li><a href="#">用户服务协议</a></li>
+                    <li><a href="#">投资服务协议</a></li>
+                    <li><a href="#">风险揭示书</a></li>
+                    <li><a href="#">靠谱投业务规则</a></li>
+                </ul>
+            </div>
+            <div class="list">
+                <h4>联系我们</h4>
+                <p class="airline">
+                    4000-400-177
+                    <span>周一到周六 9:00 - 21:00</span>
+                </p>
+                <a class="weibo-link" href="http://weibo.com/kaoputou" target="_blank">@靠谱投官方微博</a>
+            </div>
+            <div class="qrcodes">
+                <div class="qrcode">
+                    <img src="../icon/qrcode_for_gzh_1010.png">
+                    <span>靠谱投微信公众号</span>
+                </div>
+                <div class="qrcode">
+                    <img src="../icon/qrcode_for_app_1010.png">
+                    <span>靠谱投移动客户端</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="inner">
+            <ul>
+                <li><a href="#">友情链接</a></li>
+                <li><a href="#">掌柜攻略</a></li>
+                <li><a href="#">掌柜攻略</a></li>
+                <li><a href="#">拉勾网</a></li>
+                <li><a href="#">餐饮咖</a></li>
+                <li><a href="#">众筹家</a></li>
+                <li><a href="#">种财网</a></li>
+            </ul>
+            <p> ©2016 <a href="/">kaoputou.com 靠谱投</a> 京ICP备15039009号</p>
+        </div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

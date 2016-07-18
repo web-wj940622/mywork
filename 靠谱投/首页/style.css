@@ -1,0 +1,908 @@
+*{
+    margin:0;
+    padding: 0;
+}
+html,body{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+.logo{
+    width:159px;
+    height: 30px;
+    margin-top: 20px;
+    text-indent: -9999px;  //首行缩进
+    position: relative;
+}
+.fl{
+    float:left;
+}
+.fl>a{
+    display: block;
+    text-indent:0;
+    height:100%;
+    position: absolute;
+    top:20px;
+    left:20px;
+}
+header .container{
+    width:100%;
+    height:54px;
+    background-color: #fff;
+}
+header .nav-link{
+    width:1000px;
+    list-style: none;
+    font-size:16px;
+    line-height:52px;
+    float:left;
+    position: absolute;
+    top:8px;
+    left:230px;
+}
+header .nav-link li{
+    display: inline-block;
+    height:100%;
+    margin-right: 33px;
+}
+header .nav-link a{
+    text-align: center;
+    text-decoration: none;
+    color:#737373;
+    float:left;
+}
+header .nav-link li:hover{
+    background-color: #f5f5f5;
+}
+header .search-wrap{
+    margin: 16px 0 0 32px;
+    width: 240px;
+    position:absolute;
+    top:-2px;
+    left:570px;
+}
+header .search-wrap .form{
+    width:240px;
+    height:40px;
+    border:none;
+    border-radius: 40px;
+    background-color: #eeeeee;
+    font-size:20px;
+}
+header .search-wrap #search_word{
+    width:200px;
+    height:40px;
+    border: none;
+    border-radius: 40px;
+    margin-left:40px;
+    padding: 0 0;
+    background-color: #eeeeee;
+    font-size: 14px;
+    outline: none;
+}
+header .search-wrap #search_btn{
+    width:30px;height:30px;
+    background: url("../icon/search-btn.png");
+    border: none;
+    position:absolute;
+    top:5px;left:200px;
+}
+header .action-nav{
+    list-style: none;
+    height:40px;
+    position: absolute;
+    top:10px;left: 1214px;
+}
+header .action-nav a{
+    color: #555;
+    font-size: 14px;
+    line-height:40px;
+    display: block;
+    margin-top:-10px;
+    padding: 0 22px;
+    border-radius: 40px;
+    text-decoration: none;
+}
+header .action-nav .btn-login{
+    width:72px;height:40px;
+    position:absolute;
+    top:13px;
+    right:-20px;
+}
+header .action-nav .btn-join{
+    color:#fff;
+    background-color: #FD5D5D;
+    width:30px;height:40px;
+    position:absolute;
+    top:13px;
+    right:-45px;
+}
+header .cdkey-entry{
+    display: block;
+    width:150px;
+    height:40px;
+    line-height:40px;
+    border-radius:40px;
+    color: #FD5D5D;
+    border:1px solid #FD5D5D;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    position: absolute;
+    top:14px;
+    left:967px;
+}
+/*====================================== 大页面下的 导航栏 布局====================================*/
+#nav-hidden-btn{
+    background: url("../icon/header-canvas.png");
+    display: none;
+    width:24px;height:24px;
+    position: absolute;
+    top:15px;left:15px;
+    z-index: 2;
+}
+.nav-hidden-canvas{
+    display: none;
+    width: 100%;
+    height:100%;
+    position: absolute;
+    background: rgba(0,0,0,.3);
+}
+.nav-hidden-list{
+    display: none;
+    width: 270px;
+    height:100%;
+    position:relative;
+    background-color: #ffffff;
+    color:#999;
+}
+.action-nav-hidden{
+    width: 100%;
+    height:80px;
+    background-color: #FD5D5D;
+    position: relative;
+}
+.action-nav-hidden a{
+    position: absolute;
+    width:50%;
+    text-align: center;
+    color:#fff;
+    font-size: 18px;
+    line-height:80px;
+    text-decoration: none;
+    border-right: 1px solid #E85454;
+}
+.action-nav-hidden .btn-join-hidden{
+    margin-left:50%;
+}
+.action-list-hidden{
+    margin:0;
+    padding: 12px 0;
+    list-style: none;
+}
+.action-list-hidden li{
+    padding: 20px 20px 20px 32px;
+}
+.action-list-hidden a{
+    font-size: 18px;
+    line-height:18px;
+    color:#555;
+    text-decoration: none;
+}
+.action-list-hidden .index{
+    color: #FD5D5D;
+}
+/*====================================== 隐藏 导航栏 布局====================================*/
+header .slider-area{
+    max-width: 100%;
+    height:480px;
+    display: block;
+    background-repeat: no-repeat;
+    position: relative;
+    top:20px;
+}
+header .slider-area img{
+    width:100%;
+    height:480px;
+}
+header .slider-area a{
+    display: inline-block;
+    width:50px;
+    height:100px;
+    opacity: .2;
+}
+header .slider-area #prev{
+    background-color: red;
+    position: absolute;
+    top:220px;
+    left:100px;
+}
+header .slider-area #next{
+    background-color: blue;
+    position: absolute;
+    top:220px;
+    left:1150px;
+}
+header .slider-area .slider-area-select{
+    list-style:none;
+    width:100%;
+    height:16px;
+    position:absolute;
+    bottom: 28px;
+    text-align: center;
+    margin:0;
+    padding: 0;
+}
+header .slider-area .slider-area-select li{
+    display: inline-block;
+    margin:0 8px;
+    width:40px;
+    height:6px;
+}
+header .slider-area .slider-area-select li a{
+    text-indent: -9999px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #d8d8d8;
+    display: block;
+    height: 100%;
+    opacity: 1;
+}
+header .slider-area .slider-area-select li #selector0{
+    background-color: #FD5D5D;
+}
+/*====================================== 移动图片     ====================================*/
+header .record-info{
+    background: #fff;
+    border-bottom: 1px solid #E5E5E5;
+    margin-top:15px;
+}
+header .record-info .inner{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    width:1024px;
+    height:96px;
+}
+header .record-info .inner ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width:100%;
+    height:100%;
+}
+
+header .record-info .inner ul li{
+    float: left;
+    width: 20%;
+    height:36px;
+    margin: 30px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #9B9B9B;
+    border-right: 1px solid #9B9B9B;
+}
+header .record-info .inner ul .money{
+    width: 29%;
+}
+header .record-info .inner ul .completed{
+    width: 29%;
+}
+header .record-info .inner ul li strong{
+    font-weight: 300;
+    font-size:35px;
+    font-family: Arial;
+    color:black;
+}
+/*====================================== 浏览记录     ====================================*/
+header .video-info{
+    background-color: #eaeaea;
+    padding: 40px 0;
+    height:185px;
+}
+header .video-info .inner{
+    text-align: center;
+}
+header .video-info .inner a{
+    position: relative;
+    display: inline-block;
+    width: 320px;
+    height: 180px;
+    /*background-color: #fd5d5d;*/
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 35px;
+}
+header .video-info .inner .video-btn-1{
+    background-image: url(../icon/img-kpt-intro.jpg);
+}
+header .video-info .inner .video-btn-2{
+    background-image: url(../icon/img-risk-tip.jpg);
+}
+/*====================================== 视频介绍     ====================================*/
+header .section{
+    margin: 0 auto;
+    height:1450px;
+    background-color: rgb(245,245,245);
+    position: relative;
+}
+header .section-header{
+    width:100%;
+    position:relative;
+}
+header .section-header h2{
+    color: #333;
+    font-size: 24px;
+    margin: 0;
+    font-weight: 400;
+    position: absolute;
+    top:50px;left:130px;
+}
+header .section .projects{
+    width:1024px;
+    height:1280px;
+    position: absolute;
+    top:100px;left:130px;
+    /*border:1px solid;        !*TODO 要去掉的*!*/
+    list-style: none;
+}
+header .section .projects .card {
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+header .section .projects .card .card-body{
+    width: 57.03125%;
+    height:271px;
+    float: right;
+    margin-right: 0;
+    padding: 30px 0 0 0;
+    position: relative;
+    /*border:1px solid;          !*TODO 要去掉的*!*/
+}
+header .section .projects .card .card-body h3{
+    margin: 0;
+    font-size: 24px;
+    color: #555;
+    line-height: 1.2em;
+
+}
+header .section .projects .card .card-body h3 .title{
+    font-size:24px;
+    text-decoration: none;
+    color:#4a4a4a;
+}
+header .section .projects .card .card-body h3 .title span{
+    font-size: 16px;
+    font-weight: 400;
+}
+header .section .projects .card .card-body .sub-info{
+    font-size: 14px;
+    margin-top: 6px;
+}
+header .section .projects .card .card-body .sub-info .p-locate{
+    float:left;
+}
+header .section .projects .card .card-body .sub-info .p-locate .icon-location{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    background-image: url(../icon/gps.png);
+    float:left;
+}
+header .section .projects .card .card-body .sub-info .p-shop{
+    margin-left: 72px;
+    color:rgb(236,153,153);
+}
+header .section .projects .card .card-body .sub-info .p-shop .icon-shop{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background-image: url(../icon/gps-place.png);
+    float:left;
+    margin-top:-3px;
+}
+header .section .projects .card .card-body .head-hidden{
+    position: absolute;
+    top: 30px;
+    right: 24px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+header .section .projects .card .card-body .time-count {
+    width:558px;
+    margin: 90px 0 12px;
+    border-radius: 6px;
+    border: 1px solid #51D090;
+    padding: 8px 0;
+    color: #51D090;
+    font-size: 14px;
+    text-align: center;
+}
+header .section .projects .card .card-body .f-detail {
+    border-radius: 6px;
+    padding: 0;
+    list-style: none;
+}
+header .section .projects .card .card-body .f-detail .f-money {
+    float: left;
+    width: 28%;
+}
+header .section .projects .card .card-body .f-detail .f-money strong{
+    display: block;
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: #555;
+    font-weight: 400;
+}
+header .section .projects .card .card-body .f-detail .f-money strong small,.label{
+    font-size: 13px;
+    color:#a3a3a3;
+}
+
+header .section .projects .card .card-body .f-detail .f-price {
+    float: left;
+    width: 28%;
+}
+header .section .projects .card .card-body .f-detail .f-price strong{
+    display: block;
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: #555;
+    font-weight: 400;
+}
+
+
+header .section .projects .card .card-body .f-detail .f-day {
+    float: left;
+    width: 28%;
+}
+header .section .projects .card .card-body .f-detail .f-day strong{
+    display: block;
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: #555;
+    font-weight: 400;
+}
+
+header .section .projects .card .card-body .f-detail .f-stock {
+    float: left;
+    width: 16%;
+}
+header .section .projects .card .card-body .f-detail .f-stock strong{
+    display: block;
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: #555;
+    font-weight: 400;
+}
+header .section .projects .card .card-body .f-detail .f-stock strong small{
+    font-size: 13px;
+    color:#a3a3a3;
+}
+header .section .projects .card .card-body .progress {
+    margin:116px 0 15px;
+    width:100%;
+    height:8px;
+}
+header .section .projects .card .card-body .progress .progress-bar{
+    width:95%;
+    float:left;
+    height:100%;
+    border-radius: 20px;
+    background-color: #FD5D5D;
+}
+/*====================================== Section one     ====================================*/
+header .section .complete{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:-65px;
+    width:1024px;
+    height:1320px;
+}
+header .section .complete .project{
+    width: 31%;
+    float: left;
+    margin-right: 2.33%;
+    height: 240px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.05);
+    margin-bottom: 24px;
+    background-image: url(../img/FmK215rodIiIu-E6UW4MzxZ9dNnm.jpg);
+}
+header .section .complete .project img{
+    display: block;
+    width:100%;
+}
+header .section .complete #one {
+    margin-top: 100px;
+}
+header .section .complete #two {
+    margin-top: 100px;
+}
+header .section .complete #three {
+    margin-top: 100px;
+}
+header .section .complete .project .base-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 44px;
+    width: 100%;
+    padding: 24px 0 0 24px;
+    color: #fff;
+}
+h4{
+    font-size: 24px;
+    margin: 0 0 12px;
+}
+header .section .complete .project .base-info p {
+    margin: 0;
+    font-size: 14px;
+}
+header .section .complete .project .base-info .location {
+    font-size: 12px;
+    position: absolute;
+    left: 10px;
+    bottom: 15px;
+    padding-left: 12px;
+}
+header .section .complete .project .base-info .location .icon-location{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    background-image: url(../icon/gps.png);
+}
+header .section .complete .project .financing-info {
+    width: 100%;
+    background-color: #fff;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #999;
+    font-size: 14px;
+    padding: 15px;
+    height:20px;
+}
+header .section .complete .project .financing-info strong {
+    color: #555;
+    margin: 0 20px 0 6px;
+}
+header .section .complete .project .complete-info{
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    background-color: #FD5D5D;
+    border-radius: 32px;
+    padding: 2px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+}
+header .section .complete .project .complete-info strong {
+    display: inline-block;
+    border: 1px solid #fff;
+    width:60px;
+    height: 60px;
+    border-radius: 30px;
+    line-height:30px;
+    padding:0 0 1px 1px;
+}
+/*====================================== Section two     ====================================*/
+header .coming-list-header{
+    display: block;
+    position: relative;
+    width:100%;
+    height:85px;
+    background-color: rgb(245,245,245);;
+}
+header .coming-list-header h2{
+    font-size:1.5em;
+    position:absolute;
+    left:130px;top:30px;
+}
+/*====================================== Coming soon     ====================================*/
+header .coming-list{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    height:666px;
+    background-color: #EAEAEA;
+}
+header .coming-list .inner{
+    margin-left: auto;
+    margin-right: auto;
+    height:618px;
+}
+header .coming-list .inner .coming-box{
+    width:1024px;height:618px;
+    margin:0 auto;
+}
+header .coming-list .inner .coming-box .coming{
+    width: 230px;
+    float: left;
+    margin: 16px 26px 16px 0;
+    border-radius: 6px;
+    overflow: hidden;
+    height:174px;
+    background-image: url(../img/kaochuan.jpeg);
+}
+/*====================================== Coming list     ====================================*/
+header #up{
+    height:420px;
+}
+header .section #down{
+    width:1024px;
+    height:24px;
+    margin-top: -50px;
+}
+header .section .article{
+    width:1024px;height:256px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top:84px;
+    background-color: #fff;
+}
+header .section .article .headline{
+    background-image: url('http://resource.kaoputou.kp-static.com/FiOFxwINQLJ6LG2hw4U3gLtfdCMe');
+    width: 39.84375%;
+    float: left;
+    margin-right: 3.125%;
+    color: #fff;
+    height: 256px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    position: relative;
+}
+header .section .article .headline .mask{
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,.8);
+}
+header .section .article .headline .word {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px 24px;
+}
+header .section .article .headline .word h4{
+    font-size:19px;
+    line-height:1.6;
+    margin:0 0 16px;
+}
+header .section .article .headline .word p{
+    font-size:13px;
+    line-height:24px;
+    margin:0;
+    height:144px;
+    overflow: hidden;
+    color:#d8d8d8;
+}
+header .section .article-list{
+    width: 50.03125%;
+    height:200px;
+    float: right;
+    margin-right: 45px;
+    padding: 5px 20px 15px 0;
+}
+header .section .article-list ul {
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+header .section .article-list ul li {
+    position: relative;
+    margin-right: 50px;
+}
+header .section .article-list ul li a{
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    overflow: hidden;
+}
+header .section .article-list ul li span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #aaa;
+    font-size: 14px;
+}
+header .section .article-list a{
+    color: #FD5D5D;
+    margin-bottom: 0;
+}
+/*====================================== Information     ====================================*/
+header .user-guide{
+    width:100%;
+    height:432px;
+    background-color: #fff;
+}
+header .user-guide .container{
+    max-width: 1024px;
+    height:300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 70px 0;
+}
+header .user-guide .container .invest{
+    height:292px;
+    padding: 20px 60px;
+    float: left;
+    width: 38%;
+    line-height: 1.6;
+    border-right: 1px solid #eee;
+}
+header .user-guide .container .invest h3 {
+    font-size: 26px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+header .user-guide .container .invest p {
+    text-align: center;
+    display: block;
+    padding:30px 0 0 0;
+    color:#777;
+}
+header .user-guide .container .invest p a{
+    text-decoration: none;
+    color:#FD5D5D;
+}
+header .user-guide .container .invest .action a{
+    display: block;
+    background-color: #FD5D5D;
+    color:#ffffff;
+    width:120px;
+    height:48px;
+    font-size:16px;
+    border-radius: 40px;
+    margin:0 auto;
+    line-height:45px;
+}
+
+header .user-guide .container #raise{
+    border-right: none;
+}
+header .user-guide .container #raise .action a{
+    background-color: #40DDE5;
+}
+/*====================================== User guide     ====================================*/
+footer{
+    display: block;
+    width:100%;
+    height:401px;
+    background-color: rgb(74,74,74);
+}
+footer .footer-info{
+    width:100%;
+    height:250px;
+    padding: 80px 0 20px;
+}
+footer .footer-info .inner {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    height:100%;
+}
+footer .footer-info .inner .list{
+    margin-right: 80px;
+    float: left;
+}
+footer .footer-info .inner .list h4 {
+    color: #fff;
+    opacity: .7;
+    margin: 0 0 24px;
+    font-size: 18px;
+}
+footer .footer-info .inner .list ul {
+    margin:0;
+    padding:0;
+}
+footer .footer-info .inner .list ul li {
+    list-style: none;
+    margin-bottom: 4px;
+}
+footer .footer-info .inner .list ul li a{
+    font-size: 14px;
+    line-height: 2em;
+    margin-bottom: 4px;
+    color:#fff;
+    text-decoration: none;
+    opacity: .4;
+}
+footer .footer-info .inner .list p{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    opacity: .4;
+}
+footer .footer-info .inner .list p span {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+footer .footer-info .inner .list .weibo-link {
+    font-size: 14px;
+    margin-top: 50px;
+    display: block;
+    color: #ffffff;
+    opacity: .4;
+    text-decoration: none;
+}
+footer .footer-info .inner .qrcodes{
+    float: left;
+    width:270px;
+    height:150px;
+}
+footer .footer-info .inner .qrcode{
+    float: left;
+}
+footer .footer-info .inner .qrcode img {
+    width: 120px;
+    height: 120px;
+    display: block;
+}
+footer .footer-info .inner .qrcode span {
+    text-align: center;
+    display: block;
+    margin-top: 16px;
+    font-size: 14px;
+    color: #ccc;
+}
+footer .footer-info .inner .qrcode:first-child{
+    margin-right: 30px;
+}
+footer .footer-bottom{
+    width:100%;
+    height:50px;
+}
+footer .footer-bottom .inner{
+    width:1024px;
+    margin:0 auto;
+    border-top: 1px solid #666;
+}
+footer .footer-bottom .inner ul{
+    list-style: none;
+}
+footer .footer-bottom .inner ul li{
+    float: left;
+    padding: 10px 8px;
+}
+footer .footer-bottom .inner ul li a{
+    color: #fff;
+    opacity: .4;
+    font-size: 12px;
+    line-height: 24px;
+    text-decoration: none;
+}
+footer .footer-bottom .inner p{
+    color: #858788;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 0 8px;
+    margin-left: 730px;
+    margin-top: 10px;
+}
+footer .footer-bottom .inner p a{
+    text-decoration: none;
+    color:#858788;
+}
+/*====================================== footer     ====================================*/

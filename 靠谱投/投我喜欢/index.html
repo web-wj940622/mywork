@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="header">
+
+    <div class="container">
+        <h1 class="logo fl">
+            <a href="#"><img src="../icon/logo-new.png"></a>
+        </h1>
+
+        <nav class="nav-wrap">
+            <ul class="nav-link">
+                <li><a href="#" class="active index">首页</a></li>
+                <li><a href="#">投我喜欢</a></li>
+                <li><a href="#">融资之路</a></li>
+                <li><a href="#">新手指南</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="search-wrap">
+        <form method="get" class="form">
+            <input type="text" name="word" class="search-input" id="search_word" value placeholder="找项目">
+            <input type="submit" id="search_btn" value="">
+        </form>
+    </div>
+    <ul class="action-nav">
+        <li><a href="#" class="btn-login">登录</a></li>
+        <li><a href="#" class="btn-join">注册</a></li>
+    </ul>
+    <a href="#" class="cdkey-entry">优先认购通道</a>
+</header>
+<div class="section">
+    <div class="filter-wrap" id="filter">
+        <div class="filter-area">
+            <span>按状态</span>
+            <ul>
+                <li><a href="/" class="active">全部</a></li>
+                <li><a href="/">正在预热</a></li>
+                <li><a href="/">正在融资</a></li>
+                <li><a href="/">融资完成</a></li>
+            </ul>
+        </div>
+        <div class="filter-area">
+            <span>按性质</span>
+            <ul>
+                <li><a href="/" class="active">全部</a></li>
+                <li><a href="/">新店众筹</a></li>
+                <li><a href="/">品牌众筹</a></li>
+                <li><a href="/" class="positive">老店众筹</a></li>
+            </ul>
+        </div>
+        <div class="filter-area">
+            <span>按地区</span>
+            <ul class="filter-item-list">
+                <li><a href="/" class="active">全部</a></li>
+                <ul class="room">
+                <li><a href="/">上海市</a></li>
+                <li><a href="/">重庆市</a></li>
+                <li><a href="/">北京市</a></li>
+                <li><a href="/">湖南省</a></li>
+                <li><a href="/">山东省</a></li>
+                <li><a href="/">四川省</a></li>
+                <li><a href="/">天津市</a></li>
+                <li><a href="/">广东省</a></li>
+                <li><a href="/" class="positive">安徽省</a></li>
+                <li><a href="/" class="positive">湖北省</a></li>
+
+                <li class="hidden"><a href="/">江苏省</a></li>
+                <li class="hidden"><a href="/">浙江省</a></li>
+                <li class="hidden"><a href="/">福建省</a></li>
+                <li class="hidden"><a href="/">河南省</a></li>
+                <li class="hidden"><a href="/">河北省</a></li>
+                <li class="hidden"><a href="/">辽宁省</a></li>
+                <li class="hidden"><a href="/">黑龙江</a></li>
+                <li class="hidden"><a href="/">内蒙古</a></li>
+                <li class="hidden"><a href="/">新疆省</a></li>
+                <li class="hidden"><a href="/">甘肃省</a></li>
+
+                <li class="hidden"><a href="/">宁夏省</a></li>
+                <li class="hidden"><a href="/">陕西省</a></li>
+                <li class="hidden"><a href="/">广西省</a></li>
+                <li class="hidden"><a href="/">贵州省</a></li>
+                <li class="hidden"><a href="/">云南省</a></li>
+                <li class="hidden"><a href="/">山东省</a></li>
+                </ul>
+                <span id="more" style="cursor:pointer">更多</span>
+                <span id="less" style="cursor:pointer">收起</span>
+            </ul>
+        </div>
+    </div>
+    <ul class="projects">
+        <!--第一排-->
+        <li class="card warm-up">
+            <a class="card-head">
+                <img src="../img/Fk9g48mzspsquv9rHWBTZ6V8U9du.jpeg">
+                <span class="p-state">正在预热</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">醉麻辣</a>
+                        <span> / 中国蘸锅串串引领者</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            北京市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="time-count">
+                    <span class="time-notice">倒计时:</span>
+                    <span class="time">时间</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>160万</span>
+                    </p>
+                    <p class="fr">申请金额
+                        <span>322万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <li class="card warm-up">
+            <a class="card-head">
+                <img src="../img/FqTYHpro3hPCecqe4u5r_CBrObuX.jpeg">
+                <span class="p-state">正在预热</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">辣尚瘾</a>
+                        <span> / 专注地道烤鱼</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            北京市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="time-count">
+                    <span class="time-notice">倒计时:</span>
+                    <span class="time">时间</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>280万</span>
+                    </p>
+                    <p class="fr">申请金额
+                        <span>399万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <li class="card warm-up last">
+            <a class="card-head">
+                <img src="../img/FqmUMJw0Q2g5jyWzdgMfYU3VdmAG (1).jpeg">
+                <span class="p-state">正在预热</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">仔皇煲</a>
+                        <span> / 做有态度的煲仔饭</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            北京市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="time-count">
+                    <span class="time-notice">倒计时:</span>
+                    <span class="time">时间</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>163万</span>
+                    </p>
+                    <p class="fr">申请金额
+                        <span>361万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <!--第二排-->
+        <li class="card warm-up">
+            <a class="card-head">
+                <img src="../img/FoI5vPMgip48vL6xt6HUuNGhgRkr (1).jpeg">
+                <span class="p-state">正在预热</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">仔皇煲</a>
+                        <span> / 做有态度的煲仔饭</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            北京市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="time-count">
+                    <span class="time-notice">倒计时:</span>
+                    <span class="time">时间</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>163万</span>
+                    </p>
+                    <p class="fr">申请金额
+                        <span>397万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <li class="card on-going">
+            <a class="card-head">
+                <img src="../img/Fmr-12vzGh5kPIVn4D0tSqT6EpcZ.jpeg">
+                <span class="p-state" style="background-color: rgb(101,196,217)">融资成功</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">杨兴记臭鳜鱼</a>
+                        <span> / 臭鳜鱼只有一种味道,<br>就在杨兴记</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            北京市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="progress">
+                    <span class="progress-bar"></span>
+                    <span class="progress-num">100%</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>280万</span>
+                    </p>
+                    <p class="fr">已融资
+                        <span>360万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <li class="card on-going last">
+            <a class="card-head">
+                <img src="../img/Fg8N2DdtudyK5X3Xl5jGvMPiLdPt (1).jpeg">
+                <span class="p-state" style="background-color: rgb(101,196,217)">融资成功</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">湘阁里辣</a>
+                        <span> / 品质源于诚信</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            广东省
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="progress">
+                    <span class="progress-bar"></span>
+                    <span class="progress-num">100%</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>230万</span>
+                    </p>
+                    <p class="fr">已融资
+                        <span>230万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <!--第三排-->
+        <li class="card on-going">
+            <a class="card-head">
+                <img src="../img/FmK215rodIiIu-E6UW4MzxZ9dNnm.jpeg">
+                <span class="p-state" style="background-color: rgb(101,196,217)">融资成功</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">一味一诚烤全鱼</a>
+                        <span> / 好好学习,天天吃<br>鱼!</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            北京市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="progress">
+                    <span class="progress-bar"></span>
+                    <span class="progress-num">100%</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>250万</span>
+                    </p>
+                    <p class="fr">已融资
+                        <span>250万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <li class="card on-going">
+            <a class="card-head">
+                <img src="../img/Ftdith8CzRLxNcOqn-TUrv2ZL_HP.jpeg">
+                <span class="p-state" style="background-color: rgb(101,196,217)">融资成功</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">炊烟食代</a>
+                        <span> / 地道湘菜,长沙更受欢迎的地<br>道湘菜</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            湖南省
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="progress">
+                    <span class="progress-bar"></span>
+                    <span class="progress-num">100%</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>300万</span>
+                    </p>
+                    <p class="fr">已融资
+                        <span>300万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <li class="card on-going last">
+            <a class="card-head">
+                <img src="../img/Fmq0cCL-QRT392ENW9dBk2q0jcq5.jpeg">
+                <span class="p-state" style="background-color: rgb(101,196,217)">融资成功</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">迷尚豆捞</a>
+                        <span> / 健康养颜金汤锅</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            四川省
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="progress">
+                    <span class="progress-bar"></span>
+                    <span class="progress-num">100%</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>231万</span>
+                    </p>
+                    <p class="fr">已融资
+                        <span>231万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <!--第四排-->
+        <li class="card on-going">
+            <a class="card-head">
+                <img src="../img/Fur4lUBKF4Lrwr4MjFDyxH79sO8d.jpeg">
+                <span class="p-state" style="background-color: rgb(101,196,217)">融资成功</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">丰茂烤串</a>
+                        <span> / 羊肉现串才好吃</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            上海市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="progress">
+                    <span class="progress-bar"></span>
+                    <span class="progress-num">100%</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>400万</span>
+                    </p>
+                    <p class="fr">已融资
+                        <span>400万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <li class="card on-going">
+            <a class="card-head">
+                <img src="../img/FknLY-EedfZ5Uhu58vLCq76uR8oz.jpeg">
+                <span class="p-state" style="background-color: rgb(101,196,217)">融资成功</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">闫府私房菜</a>
+                        <span> / 腰子用心做!</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            天津市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="progress">
+                    <span class="progress-bar"></span>
+                    <span class="progress-num">100%</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>300万</span>
+                    </p>
+                    <p class="fr">已融资
+                        <span>300万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <li class="card on-going last">
+            <a class="card-head">
+                <img src="../img/FuI6P09Bm5eCp6TMZoks9Hu0Kpkz.jpeg">
+                <span class="p-state" style="background-color: rgb(101,196,217)">融资成功</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">一味一诚烤全鱼</a>
+                        <span> / 好好学习,天天吃<br>鱼!</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            北京市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="progress">
+                    <span class="progress-bar"></span>
+                    <span class="progress-num">100%</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>250万</span>
+                    </p>
+                    <p class="fr">已融资
+                        <span>250万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <!--第五排-->
+        <li class="card on-going">
+            <a class="card-head">
+                <img src="../img/FuI6P09Bm5eCp6TMZoks9Hu0Kpkz.jpeg">
+                <span class="p-state" style="background-color: rgb(101,196,217)">融资成功</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">一味一诚烤全鱼</a>
+                        <span> / 好好学习,天天吃<br>鱼!</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            北京市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="progress">
+                    <span class="progress-bar"></span>
+                    <span class="progress-num">100%</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>200万</span>
+                    </p>
+                    <p class="fr">已融资
+                        <span>200万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <li class="card on-going">
+            <a class="card-head">
+                <img src="../img/FjbOf-fv-CfuKM21Gq_qHAclIEDC.jpeg">
+                <span class="p-state" style="background-color: rgb(101,196,217)">融资成功</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">相约回家吃饭</a>
+                        <span> / 让爱回家,记忆中的味<br>道!</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            湖南省
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="progress">
+                    <span class="progress-bar"></span>
+                    <span class="progress-num">100%</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>260万</span>
+                    </p>
+                    <p class="fr">已融资
+                        <span>260万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <li class="card on-going last">
+            <a class="card-head">
+                <img src="../img/FnCGW0ha5KjAYXtAdRB68C-y6gG6.jpeg">
+                <span class="p-state" style="background-color: rgb(101,196,217)">融资成功</span>
+            </a>
+            <div class="card-body">
+                <div class="sub-info-wrap">
+                    <h3>
+                        <a href="#">阿达西</a>
+                        <span> / 真朋友,此相聚</span>
+                    </h3>
+                    <div class="sub-info">
+                        <p class="p-locate">
+                            <span class="icon-location"></span>
+                            北京市
+                        </p>
+                        <p class="p-shop">
+                            <span class="icon-shop"></span>
+                            新店众筹
+                        </p>
+                    </div>
+                </div>
+                <p class="progress">
+                    <span class="progress-bar"></span>
+                    <span class="progress-num">100%</span>
+                </p>
+                <div class="p-money">
+                    <p class="fl">项目总额
+                        <span>180万</span>
+                    </p>
+                    <p class="fr">已融资
+                        <span>180万</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div id="pagination">
+        <ul class="pagination">
+            <li><a href="#" class="selector prev">上一页</a></li>
+            <li><a href="#" class="page-number one">1</a></li>
+            <li><a href="#" class="page-number two">2</a></li>
+            <li><a href="#" class="selector next">下一页</a></li>
+        </ul>
+    </div>
+</div>
+<div class="blank"></div>
+<footer id="footer">
+    <div class="footer-info">
+        <div class="inner">
+            <div class="list">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">靠谱投介绍</a></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">媒体报道</a></li>
+                </ul>
+            </div>
+            <div class="list">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">新手指南</a></li>
+                    <li><a href="#">投资人指南</a></li>
+                    <li><a href="#">项目方指南</a></li>
+                    <li><a href="#">名词解释</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="list">
+                <h4>相关协议</h4>
+                <ul>
+                    <li><a href="#">用户服务协议</a></li>
+                    <li><a href="#">投资服务协议</a></li>
+                    <li><a href="#">风险揭示书</a></li>
+                    <li><a href="#">靠谱投业务规则</a></li>
+                </ul>
+            </div>
+            <div class="list">
+                <h4>联系我们</h4>
+                <p class="airline">
+                    4000-400-177
+                    <span>周一到周六 9:00 - 21:00</span>
+                </p>
+                <a class="weibo-link" href="http://weibo.com/kaoputou" target="_blank">@靠谱投官方微博</a>
+            </div>
+            <div class="qrcodes">
+                <div class="qrcode">
+                    <img src="../icon/qrcode_for_gzh_1010.png">
+                    <span>靠谱投微信公众号</span>
+                </div>
+                <div class="qrcode">
+                    <img src="../icon/qrcode_for_app_1010.png">
+                    <span>靠谱投移动客户端</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="inner">
+            <ul>
+                <li><a href="#">友情链接</a></li>
+                <li><a href="#">掌柜攻略</a></li>
+                <li><a href="#">掌柜攻略</a></li>
+                <li><a href="#">拉勾网</a></li>
+                <li><a href="#">餐饮咖</a></li>
+                <li><a href="#">众筹家</a></li>
+                <li><a href="#">种财网</a></li>
+            </ul>
+            <p> ©2016 <a href="/">kaoputou.com 靠谱投</a> 京ICP备15039009号</p>
+        </div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
