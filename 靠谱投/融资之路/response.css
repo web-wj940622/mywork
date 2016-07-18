@@ -1,0 +1,37 @@
+@media screen and (max-width: 655px){
+    header .container .mobile-nav{
+        display: block;
+    }
+    header .container .nav-wrap{
+        display: none;
+    }
+    header .container .logo{
+        float: none;
+        left: 50%;
+        margin-left: -80px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 640px){
+    .intro-bg .intro h2{
+        font-size: 28px;
+        line-height: 1.5;
+    }
+    .intro-bg .intro .record-wrap{
+        width: 100%;
+        max-width: 320px;
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .intro-bg .intro .raise-btn {
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+    }
+    .intro-bg .intro .raise-btn .icon-play{
+        position: absolute;
+        top:10px;left:200px;
+    }
+}

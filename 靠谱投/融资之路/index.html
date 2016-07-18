@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="response.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+<body>
+<header id="header">
+    <div class="container clearfix">
+        <h1 class="logo fl">
+            <a href="#">
+                <img src="../icon/logo-new.png">
+            </a>
+        </h1>
+        <div class="mobile-nav fl hidden phone-show" id="btn-hidden" style="background-image: url(../icon/header-canvas.png)"></div>
+        <div class="offcanvas active" id="header-offcanvas">
+            <div class="offcanvas-bar" id="offcanvas-bar">
+                <div class="offcanvas-content">
+                    <div class="mobile-auth clearfix">
+                        <a class="fl" href="/">登录</a>
+                        <a class="fl" href="/">注册</a>
+                    </div>
+                    <ul class="mobile-nav-list">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/">投我喜欢</a></li>
+                        <li><a href="/">新手指南</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-wrap clearfix phone-hidden">
+            <ul class="link-nav">
+                <li class="active title"><a href="/" class="active index">首页</a> </li>
+                <li><a href="/">投我喜欢</a> </li>
+                <li><a href="/">融资之路</a> </li>
+                <li><a href="/">新手指南</a> </li>
+            </ul>
+            <div class="search-wrap fl phone-hidden">
+                <form method="get">
+                    <input type="text" name="word" class="search-input" id="search-word" value placeholder="找项目">
+                    <span class="icon-search"></span>
+                    <input class="search-btn" type="submit" value="搜索">
+                </form>
+            </div>
+            <ul class="action-nav">
+                <li><a class="btn-login" href="/">登录</a></li>
+                <li><a class="btn-join" href="/">注册</a></li>
+            </ul>
+            <a class="cdkey-entry fr" href="/">优先认购通道</a>
+        </nav>
+    </div>
+</header>
+<div class="intro-bg" style="background-image: url(../img/bg.jpg)">
+    <div class="intro">
+        <h2>这里是中国餐饮业的纳斯达克</h2>
+        <div class="record-wrap">
+            <div class="record">
+                <p>
+                    <stron>21个</stron>
+                    餐饮品牌已在靠谱投挂牌众筹
+                </p>
+                <p>
+                    <strong>12个</strong>
+                    项目即将上线
+                </p>
+            </div>
+        </div>
+        <a class="btn btn-primary raise-btn">
+            <span class="icon-play" style="background-image: url(../icon/btn-player.png)"></span>
+            观看视频介绍
+        </a>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
