@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue模块</title>
+</head>
+<script src="lib/vue.js"></script>
+<script>
+    window.onload = function () {
+        new Vue({
+            el: '#box',
+            data: {
+                msg: 'abc'
+            }
+        })
+    }
+</script>
+<body>
+<div id="box">
+    <input type="text" v-model="msg">
+    <br>
+    {{msg}}
+    <br>
+    {{*msg}}
+    <br>
+    {{{msg}}}
+    <br>
+    {{'WELCOME'|lowercase|capitalize}}
+    <br>
+    {{'welcome'|uppercase}}
+    <br>
+    {{12|currency}}
+    <br>
+    {{12|currency '#'}}
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件深入</title>
+    <style>
+
+    </style>
+    <script src="lib/vue.js"></script>
+    <script src="lib/vue-resource.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: '#box',
+                data: {},
+                methods: {
+                    show: function (ev) {
+                        alert(1);
+//                        阻止冒泡行为，利用原生js cancelBubble属性
+                        ev.cancelBubble = true;
+                    },
+                    show2:function () {
+                        alert(2);
+                    },
+                    show3:function () {
+                        alert(1);
+                    },
+                    show4:function (ev) {
+                        alert(1);
+//                        阻止事件默认行为
+                        ev.preventDefault();
+                    },
+                    show5:function (ev) {
+                        alert(ev.keyCode);
+                        if(ev.keyCode ==13){
+                            alert('你按回车了');
+                        }
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <!--阻止冒泡行为  推荐用stop-->
+    <div @click="show2()">
+        <input type="button" value="按钮" @click="show($event);">
+    </div>
+    <br>
+    <!--通过@click.stop阻止冒泡行为-->
+    <div @click="show2()">
+        <input type="button" value="按钮" @click.stop="show3();">
+    </div>
+    <br>
+
+    <!--阻止默认行为  推荐用prevent-->
+    <input type="button" value="按钮" @contextmenu="show4($event);">
+    <br>
+    <br>
+    <input type="button" value="按钮" @contextmenu.prevent="show3();">
+    <br>
+    <br>
+
+    <!--键盘事件-->
+    <input type="text" @keydown="show5($event)">
+    <input type="text" @keyup="show5($event)">
+    <!--可以直接通过@keyup.keyCode实现效果-->
+    <input type="text" @keyup.13="show2()">
+    <input type="text" @keyup.enter="show2()">
+    <input type="text" @keyup.up="show2()">
+    <input type="text" @keyup.left="show2()">
+</div>
+</body>
+</html>

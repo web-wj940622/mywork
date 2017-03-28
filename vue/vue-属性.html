@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件深入</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+    </style>
+    <script src="lib/vue.js"></script>
+    <script src="lib/vue-resource.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: '#box',
+                data: {
+                    url: 'image/green.jpg',
+                    w: '400px',
+                    t: '这是一张美丽的图片',
+                    r: 'red',
+                    b: 'blue',
+                    isTrue: true,
+                    json: {
+                        red: true,
+                        blue: false
+                    },
+                    c: {color: "red"},
+                    d: {backgroundColor: "blue"},
+                    a: {
+                        color: 'red',
+                        backgroundColor: 'blue'
+                    }
+                },
+                methods: {}
+            })
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <!--尽管能够实现效果，但会报404错误，不建议使用-->
+    <!--<img src="{{url}}" alt="">-->
+    <!--v-bind:src 可以简写为 :src且不会标红，建议简写-->
+    <!--<img v-bind:src="url">-->
+    <img :src="url" :width="w" :title="t">
+    <br>
+
+    <strong :class="r">测试文字...</strong>
+    <strong :class="[r,b]">测试文字...</strong>
+    <strong :class="{red:true,blue:isTrue}">测试文字...</strong>
+    <!--官方推荐用法-->
+    <strong :class="json">测试文字...</strong>
+    <br>
+
+    <strong :style="{color:'red'}">测试style文字...</strong>
+    <strong :style="[c]">测试style文字...</strong>
+    <strong :style="[c,d]">测试style文字...</strong>
+    <strong :style="a">测试style文字...</strong>
+</div>
+</body>
+</html>
