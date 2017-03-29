@@ -1,0 +1,4 @@
+手机端  探探  仿制版
+vue.js + bootstrap + nodejs + webpack + socket.io + mysql
+上述是打算用到的技术
+敬请期待。。
