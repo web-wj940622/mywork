@@ -1,0 +1,113 @@
+15:59:23.698 INFO - Launching a standalone Selenium Server
+15:59:23.907 INFO - Java: Oracle Corporation 25.112-b15
+15:59:23.907 INFO - OS: Windows 7 6.1 amd64
+15:59:23.918 INFO - v2.53.1, with Core v2.53.1. Built from revision a36b8b1
+15:59:23.970 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+15:59:23.970 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+15:59:23.978 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform VISTA
+15:59:23.979 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
+15:59:23.979 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
+15:59:24.222 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+15:59:24.222 INFO - Selenium Server is up and running
+15:59:24.697 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Demo, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+15:59:24.710 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Demo, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.22.397933 (1cab651507b88dec79b2b2a22d1943c01833cc1b) on port 47925
+Only local connections are allowed.
+15:59:28.721 WARN - Exception thrown
+java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'IBM419-R90LK1G4', ip: '9.197.71.201', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_112'
+Driver info: driver.version: unknown
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.openqa.selenium.remote.server.DefaultSession.execute(DefaultSession.java:183)
+	at org.openqa.selenium.remote.server.DefaultSession.<init>(DefaultSession.java:119)
+	at org.openqa.selenium.remote.server.DefaultSession.createSession(DefaultSession.java:95)
+	at org.openqa.selenium.remote.server.DefaultDriverSessions.newSession(DefaultDriverSessions.java:124)
+	at org.openqa.selenium.remote.server.handler.NewSession.handle(NewSession.java:59)
+	at org.openqa.selenium.remote.server.handler.NewSession.handle(NewSession.java:1)
+	at org.openqa.selenium.remote.server.rest.ResultConfig.handle(ResultConfig.java:111)
+	at org.openqa.selenium.remote.server.JsonHttpCommandHandler.handleRequest(JsonHttpCommandHandler.java:79)
+	at org.openqa.selenium.remote.server.DriverServlet.handleRequest(DriverServlet.java:204)
+	at org.openqa.selenium.remote.server.DriverServlet.doPost(DriverServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.openqa.selenium.remote.server.DriverServlet.service(DriverServlet.java:132)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.openqa.jetty.jetty.servlet.ServletHolder.handle(ServletHolder.java:428)
+	at org.openqa.jetty.jetty.servlet.ServletHandler.dispatch(ServletHandler.java:680)
+	at org.openqa.jetty.jetty.servlet.ServletHandler.handle(ServletHandler.java:571)
+	at org.openqa.jetty.http.HttpContext.handle(HttpContext.java:1526)
+	at org.openqa.jetty.http.HttpContext.handle(HttpContext.java:1479)
+	at org.openqa.jetty.http.HttpServer.service(HttpServer.java:920)
+	at org.openqa.jetty.http.HttpConnection.service(HttpConnection.java:820)
+	at org.openqa.jetty.http.HttpConnection.handleNext(HttpConnection.java:986)
+	at org.openqa.jetty.http.HttpConnection.handle(HttpConnection.java:837)
+	at org.openqa.jetty.http.SocketListener.handleConnection(SocketListener.java:243)
+	at org.openqa.jetty.util.ThreadedServer.handle(ThreadedServer.java:358)
+	at org.openqa.jetty.util.ThreadPool$PoolThread.run(ThreadPool.java:537)
+Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'IBM419-R90LK1G4', ip: '9.197.71.201', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_112'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.remote.server.DefaultDriverProvider.callConstructor(DefaultDriverProvider.java:113)
+	at org.openqa.selenium.remote.server.DefaultDriverProvider.newInstance(DefaultDriverProvider.java:97)
+	at org.openqa.selenium.remote.server.DefaultDriverFactory.newInstance(DefaultDriverFactory.java:60)
+	at org.openqa.selenium.remote.server.DefaultSession$BrowserCreator.call(DefaultSession.java:222)
+	at org.openqa.selenium.remote.server.DefaultSession$BrowserCreator.call(DefaultSession.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.server.DefaultDriverProvider.callConstructor(DefaultDriverProvider.java:103)
+	... 9 more
+Caused by: org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'IBM419-R90LK1G4', ip: '9.197.71.201', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_112'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:138)
+	... 14 more
+Caused by: org.openqa.selenium.WebDriverException: java.net.SocketException: Connection reset
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'IBM419-R90LK1G4', ip: '9.197.71.201', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_112'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:91)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 19 more
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:139)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:155)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:284)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:261)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:165)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:167)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:272)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:124)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:271)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	... 20 more
+15:59:28.727 WARN - Exception: Connection reset
