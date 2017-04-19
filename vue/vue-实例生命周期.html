@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/vue.js"></script>
+</head>
+<body>
+<div id="box">
+    <a :href="url">click me</a>
+    <br>
+
+    <!--通过使用 v-once 指令，你也能执行一次性地插值，当数据改变时，插值处的内容不会更新。-->
+    <!--<span v-once>{{ msg }}</span>-->
+    <!--<br>-->
+    <!--<span>{{ msg }}</span>-->
+    <!--<br>-->
+
+    <!--双大括号会将数据解释为纯文本，而非 HTML 。为了输出真正的 HTML ，你需要使用 v-html 指令：-->
+    <!--被插入的内容都会被当做 HTML —— 数据绑定会被忽略。-->
+    <div v-html="rawHtml"></div>
+    <br>
+
+    <!-- in mustaches -->
+    <!--首字母大写，系统自带过滤器-->
+    <span>{{ message | capitalize }}</span>
+    <!-- in v-bind -->
+    <div :id="rawId | formatId"></div>
+</div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#box',
+        data: {
+            a: 1,
+            url: 'http://www.baidu.com',
+            msg: 'hello world',
+            message:'acbtf',
+            rawHtml: '<li>new world</li>'
+        },
+        filters: {
+            capitalize: function (value) {
+                if (!value) return '';
+                value = value.toString();
+                return value.charAt(0).toUpperCase() + value.slice(1);
+            }
+        },
+        created: function () {
+            // `this` 指向 vm 实例
+            console.log('created' + this.a);
+        },
+        mounted: function () {
+            console.log('mounted' + '>');
+        },
+        updated: function () {
+            console.log('updated' + '>>');
+        },
+        destroyed: function () {
+            console.log('destroyed' + '>>>')
+        }
+    });
+
+
+</script>
+</html>

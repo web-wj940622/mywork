@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/vue.js"></script>
+</head>
+<body>
+<div id="app-2">
+  <span :title="message">鼠标悬停几秒钟查看此处动态绑定的提示信息！</span>
+
+    <p>{{ msg }}</p>
+    <button @click="reverseMessage()">逆转消息</button>
+
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ol>
+</div>
+</body>
+<script>
+    var box = new Vue({
+        el: 'body',
+        data: {
+            message: '页面加载于 ' + new Date(),
+            msg: 'Hello Vue.js!',
+            todos: [
+                { text: '学习 JavaScript' },
+                { text: '学习 Vue' },
+                { text: '整个牛项目' }
+            ]
+        },
+        methods: {
+            reverseMessage: function () {
+                this.msg = this.msg.split('').reverse().join('');
+            }
+        }
+    })
+</script>
+</html>
