@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机验证码</title>
+    <style>
+        #key{
+            width: 100px;
+            height: 50px;
+            background-color: gray;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div>验证码：<p id="key" onclick="show()"></p></div>
+</body>
+<script>
+    function codes(n) {
+        var a = "qwertyuioplkjhgfdsazxcvbnmMNBVCXZAQWSDERFGTYHJUIKLOP0987654321";
+        var b = "";
+        for (var i = 0; i < n; i++) {
+            var index = Math.floor(Math.random() * 62);
+            b += a.charAt(index);
+        }
+        return b;
+    }
+    function show() {
+        document.getElementById('key').innerHTML = codes(4);
+    }
+
+    window.onload = show;
+</script>
+</html>

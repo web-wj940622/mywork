@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="dynamic">
+    <button id="home">Home</button>
+    <button id="posts">Posts</button>
+    <button id="archive">Archive</button>
+    <br>
+    <!--不能组件复用（如ul里只能直接包含li元素），为达到目的，要使用is特性-->
+    <component :is="currentView"></component>
+
+</div>
+</body>
+<script src="../lib/vue.js"></script>
+<script>
+    var vue = new Vue({
+        el:"#dynamic",
+        data: {
+            currentView: "home"
+        },
+        components: {
+            home:{
+                template: "Home"
+            },
+            posts: {
+                template: "Posts"
+            },
+            archive: {
+                template: "Archive"
+            }
+        }
+    });
+    document.getElementById("home").onclick = function(){
+        vue.currentView = "home";
+    };
+    document.getElementById("posts").onclick = function(){
+        vue.currentView = "posts";
+    };
+    document.getElementById("archive").onclick = function(){
+        vue.currentView = "archive";
+    };
+</script>
+</html>

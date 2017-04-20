@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>修改input中placeholder颜色</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        input{width: 300px;height: 30px;margin-top: 100px;margin-left: 100px;}
+        /*修改某个input中placeholder颜色*/
+        #myinput::-webkit-input-placeholder {color: green;}
+        #myinput:-moz-placeholder {/* Firefox 18- */color: green;}
+        #myinput::-moz-placeholder{/* Firefox 19+ */color: green;}
+        #myinput:-ms-input-placeholder {color: green;}
+        /*修改某个input中placeholder颜色*/
+        /*修改所有的input中placeholder颜色*/
+        ::-webkit-input-placeholder {color: red;}
+        :-moz-placeholder {/* Firefox 18- */color: red;}
+        ::-moz-placeholder{/* Firefox 19+ */color: red;}
+        :-ms-input-placeholder {color: red;}
+        /*修改所有的input中placeholder颜色*/
+    </style>
+</head>
+<body>
+<input type="text" placeholder="html5"/>
+<input type="text" placeholder="家居行业" id="myinput"/>
+</body>
+</html>
