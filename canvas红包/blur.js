@@ -1,5 +1,8 @@
-var canvasWidth = 800;
-var canvasHeight = 600;
+/*
+ 获取移动端屏幕尺寸
+ */
+var canvasWidth = window.innerWidth;
+var canvasHeight = window.innerHeight;
 
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
@@ -14,15 +17,34 @@ var clippingRegion = {
     y: -1,
     r: radius
 };
-image.src = 'image.jpg';
+var LeftMargin = 0;
+var TopMargin = 0;
+image.src = 'image2.jpg';
 image.onload = function (e) {
+    $('#blur-div').css({'width': canvasWidth + 'px', 'height': canvasHeight + 'px'});
+
+    LeftMargin = (image.width - canvas.width) / 2;
+    TopMargin = (image.height - canvas.height) / 2;
+
+    $('#blur-image').css({
+        'width': image.width + 'px',
+        'height': image.height + 'px',
+        'top': String(-TopMargin) + 'px',
+        'left': String(-LeftMargin) + 'px'
+    });
+
     initCanvas();
 };
 
+/*
+ 初始化Canvas幕布
+ */
 function initCanvas() {
+    var theLeft = LeftMargin < 0 ? -LeftMargin : 0;
+    var theTop = TopMargin < 0 ? -TopMargin : 0;
     clippingRegion = {
-        x: Math.random() * (canvasWidth - 2 * radius) + 50,
-        y: Math.random() * (canvasHeight - 2 * radius) + 50,
+        x: Math.random() * (canvasWidth - 2 * radius - 2 * theLeft) + radius + theLeft,
+        y: Math.random() * (canvasHeight - 2 * radius - 2 * theTop) + radius + theTop,
         r: radius
     };
     draw(image, clippingRegion);
@@ -39,10 +61,17 @@ function draw(image) {
 
     context.save();
     setClippingRegion(clippingRegion);
-    context.drawImage(image, 0, 0);
+    context.drawImage(image,
+        Math.max(LeftMargin, 0), Math.max(TopMargin, 0),
+        Math.min(canvas.width, image.width), Math.min(canvas.height, image.height),
+        LeftMargin < 0 ? -LeftMargin : 0, TopMargin < 0 ? -TopMargin : 0,
+        Math.min(canvas.width, image.width), Math.min(canvas.height, image.height));
     context.restore();
 }
 
+/*
+ 动画形式显示整张图片
+ */
 function show() {
     var theAnimation = setInterval(function () {
         console.log('animation');
@@ -54,6 +83,16 @@ function show() {
     }, 30)
 }
 
+/*
+ 重置Canvas幕布
+ */
 function reset() {
     initCanvas();
 }
+
+/*
+ 添加监听事件，禁止手机屏幕滑动
+ */
+canvas.addEventListener('touchstart', function (e) {
+    e.preventDefault();
+});
