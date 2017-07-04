@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件作用域</title>
+</head>
+<script src="lib/vue.js"></script>
+<body id="content">
+<parent :childrens="childrens"></parent>
+</body>
+<!-- 这个测试主要想证明： 对于计算属性里如果关联对象，即使对象不是组件作用域内的，当对象在外部改变了某个属性，同样会出发计算属性的方法-->
+<script>
+    var parent = Vue.extend( {
+        props: {
+            childrens: ''
+        },
+        template: '<div >{{age}}</div>',
+        data: function() {
+            return {
+                name: '',
+                age: 18
+            };
+        },
+        computed: {
+            age: function() {
+                return this.childrens.age +10;
+            }
+        },
+        created: function() {
+            var _parent = this.$parent;
+            this._set = {};
+            this._set = _parent;
+        }
+    } );
+    var vm = new Vue( {
+        el: 'body',
+        data: {
+            childrens: {
+                name: '小强',
+                age: 20,
+                sex: '男'
+            }
+        },
+        components: {
+            'parent': parent
+        }
+    } );
+    vm.$data.childrens.age = 10;
+</script>
+</html>

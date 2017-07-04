@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+<div id="cac">
+    <h2>计算器</h2>
+    <div class="c_show">
+        <label><input type="text" class="s_text" onfocus="this.blur();" value="0" id="result"></label>
+    </div>
+    <div class="c_key">
+        <ul>
+            <li onclick="command(7);">7</li>
+            <li onclick="command(8);">8</li>
+            <li onclick="command(9);">9</li>
+            <li class="c_tool" onclick="del('j')">←</li>
+            <li class="c_tool" onclick="clearzero('j')">c</li>
+
+            <li onclick="command(4);">4</li>
+            <li onclick="command(5);">5</li>
+            <li onclick="command(6);">6</li>
+            <li class="c_tool" onclick="tools('*','g')">×</li>
+            <li class="c_tool" onclick="tools('/','g')">÷</li>
+
+            <li onclick="command(1);">1</li>
+            <li onclick="command(2);">2</li>
+            <li onclick="command(3);">3</li>
+            <li class="c_tool" onclick="tools('+','g');">+</li>
+            <li class="c_tool" onclick="tools('-','g');">-</li>
+            <li onclick="command(0);">0</li>
+            <li onclick="command(0);">00</li>
+            <li onclick="dot('g')">.</li>
+            <li class="c_tool" onclick="tools('%','g');">%</li>
+            <li class="c_result" onclick="equal('j');">=</li>
+        </ul>
+    </div>
+    <div>计算器</div>
+</div>
+</body>
+<script src="calculator.js"></script>
+</html>
