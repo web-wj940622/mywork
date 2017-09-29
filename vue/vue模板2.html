@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue模板2</title>
+    <script src="lib/vue.js"></script>
+</head>
+<body>
+<div id="box">
+    <vm2></vm2>
+</div>
+<template id="moban">
+    <h3 @click="change">我是标题3 -> {{msg}}</h3>
+    <ul>
+        <li v-for="item in arr">
+            {{item}}
+        </li>
+    </ul>
+</template>
+<script>
+    var vm = new Vue({
+        el: '#box',
+        components: {
+            'vm2': {
+                data: function () {
+                    return {
+                        msg: 'welcome',
+                        arr: ['apple', 'banana', 'orange']
+                    }
+                },
+                methods: {
+                    change: function () {
+                        alert(1);
+                    }
+                },
+                template: '#moban'
+            }
+        }
+    })
+</script>
+</body>
+</html>

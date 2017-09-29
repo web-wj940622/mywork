@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>监听数据变化2</title>
+    <script src="lib/vue.js"></script>
+
+</head>
+<body>
+<div id="box">
+    {{json | json}}
+    <br>
+    {{b}}
+</div>
+<script>
+    Vue.directive('on').keyCodes.ctrl = 17;
+    var vm = new Vue({
+        data: {
+            json:{name:'srtive',age:16},
+            b:2
+        }
+    }).$mount("#box");
+    
+    vm.$watch('json',function () {
+        alert('发生变化了');
+    },{deep:true});
+    
+    document.onclick = function () {
+        vm.json.name = 'aaa';
+    }
+</script>
+</body>
+</html>

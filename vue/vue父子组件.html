@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue父子组件</title>
+    <script src="lib/vue.js"></script>
+</head>
+<body>
+<div id="box">
+    <aaa></aaa>
+</div>
+
+<script>
+    var vm = new Vue({
+        el: '#box',
+        data:{
+
+        },
+        components:{
+            'aaa':{
+//                此处调用
+                template:'<h3>我是aaa组件</h3><bbb></bbb>',
+                components:{
+                    'bbb':{
+                        template:'<h4>我是bbb组件</h4>'
+                    }
+                }
+            }
+        }
+        
+    })
+</script>
+</body>
+</html>

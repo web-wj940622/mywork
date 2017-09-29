@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue组件里放数据</title>
+    <script src="lib/vue.js"></script>
+</head>
+<body>
+<div id="box">
+    <vm2></vm2>
+</div>
+<script>
+    var aaa = Vue.extend({
+        data: function () {
+            return {
+                msg: '我是标题^_^'
+            };
+        },
+        methods: {
+            change: function () {
+                this.msg = "我是改变了的标题^_^"
+            }
+        },
+        template: '<h3 @click="change">{{msg}}</h3>'
+    });
+    Vue.component('vm2', aaa);
+
+    //    var vm2 = new aaa();
+    //    console.log(vm2);
+
+    var vm = new Vue({
+        el: '#box',
+        data: {
+            bSign: true
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义指令v-</title>
+    <script src="lib/vue.js"></script>
+    <style>
+        zns-red {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <zns-red></zns-red>
+</div>
+<script>
+    Vue.elementDirective('zns-red', {
+        bind:function () {
+            this.el.style.backgroundColor = "red";
+        }
+    });
+    var vm = new Vue({
+        data: {
+            aa: 'blue'
+        }
+    }).$mount("#box");
+
+</script>
+</body>
+</html>

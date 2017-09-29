@@ -28,7 +28,7 @@
                         this.age = "";
                     },
                     deleteMsg: function (n) {
-                        if (n == -1) {
+                        if (n === -1) {
                             this.myData = [];
                         } else {
                             this.myData.splice(n, 1);
@@ -51,7 +51,7 @@
             <input type="text" id="age" class="form-control" placeholder="输入年龄" v-model="age">
         </div>
         <div class="form-group">
-            <input type="button" value="添加" class="btn btn-primary" v-on:click="add()">
+            <input type="button" value="添加" class="btn btn-primary" @click="add()">
             <input type="reset" value="重置" class="btn btn-danger">
         </div>
     </form>
@@ -70,13 +70,13 @@
             <td>{{item.age}}</td>
             <td>
                 <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer"
-                        v-on:click="nowIndex=$index">删除
+                        @click="nowIndex=$index">删除
                 </button>
             </td>
         </tr>
         <tr v-show="myData.length!=0">
             <td colspan="4" class="text-right">
-                <button class="btn btn-danger" data-toggle="modal" data-target="#layer" v-on:click="nowIndex=-1">
+                <button class="btn btn-danger" data-toggle="modal" data-target="#layer" @click="nowIndex=-1">
                     删除全部
                 </button>
             </td>
@@ -100,7 +100,7 @@
                 </div>
                 <div class="modal-body text-right">
                     <button class="btn btn-primary btn-sm" data-dismiss="modal">取消</button>
-                    <button class="btn btn-danger btn-sm" data-dismiss="modal" v-on:click="deleteMsg(nowIndex)">确认
+                    <button class="btn btn-danger btn-sm" data-dismiss="modal" @click="deleteMsg(nowIndex)">确认
                     </button>
                 </div>
             </div>
